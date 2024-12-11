@@ -1,0 +1,82 @@
+body {
+    background-color: #252526;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+
+strong {
+    font-size: 2em;
+    margin: 0.5em 0 0;
+}
+
+span {
+    margin: 0 0 0.5em;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr); /* 18 groups */
+    grid-auto-rows: 4em; /* Adjust for height */
+    gap: 0.5em;
+    max-width: 100em;
+    margin: 0 auto;
+    padding: 2em;
+  }
+  
+  .element {
+    height: 4em;
+    text-align: center;
+    border-radius: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .element:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Tooltip */
+  .element .tooltip {
+    display: none;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2F343B;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-size: 0.6em;
+  }
+
+  .element > .tooltip strong {
+    color: #C5C9CE;
+  }
+  
+  .element:hover .tooltip {
+    display: block;
+  }
+  
+  /* Color coding by category */
+  .nonmetal { background-color: #0FBBEF; }
+  .noble-gas { background-color: #20DABC; }
+  .alkali-metal { background-color: #F91212; }
+  .alkaline-earth { background-color: #FFBF00; }
+  .metalloid { background-color: #12E536; }
+  .halogen { background-color: #F10F62; }
+  .transition-metal { background-color: #1371EC; }
+  .post-transition-metal { background-color: #F2920C; }
+  .lanthanide { background-color: #7412EC; }
+  .actinide { background-color: #B3D91E; }
+  .unknown { background-color: #818185;}
+  
